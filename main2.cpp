@@ -14,6 +14,8 @@ int main()
     int escolha_livres;
     int escolha_ead;
     int escolha_idiomas;
+    std::string nome_aluno;
+    std::string cidade_aluno;
 
     // -- Mensagem inicial
     std::cout << "-------------- Sistema do SENAC --------------" << std::endl;
@@ -48,9 +50,20 @@ int main()
     std::cout << "\n Voce escolheu " << cursos_idiomas[escolha_idiomas] << std::endl;
     std::cout << "----------------------------------------------" << std::endl;
 
+    // -- Registre e receba contato
+    std::cout << "\nEntre seu primeiro nome: ";
+    std::getline(std::cin, nome_aluno);
+    std::cout << "\nEntre sua cidade: ";
+    std::getline(std::cin, cidade_aluno);
+    std::cout << "----------------------------------------------" << std::endl;
+
+    // -- Mensagem final
+    std::cout << "\n"
+              << nome_aluno << " da cidade de " << cidade_aluno << std::endl;
     std::cout << "\nVoce demonstrou interesse nos seguintes cursos: " << std::endl;
     std::cout << "\nTecnico: " << cursos_tecnicos[escolha_tecnicos] << "\nLivres: " << cursos_livres[escolha_livres] << "\nEAD: " << cursos_ead[escolha_ead] << "\nIdiomas: " << cursos_idiomas[escolha_idiomas] << std::endl;
     std::cout << "\n----------------------------------------------" << std::endl;
+    std::cout << "\n\n " << std::endl;
 
-        return 0;
+    return 0;
 }
