@@ -202,8 +202,5 @@ int main()
         std::cout << "Tchau, ate mais!" << std::endl;
         std::cout << "-------------- FIM --------------" << std::endl;
     }
-
-    std::cout << "linha em construção " << std::endl;
-
     return 0;
 }

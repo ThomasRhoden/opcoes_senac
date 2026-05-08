@@ -16,6 +16,8 @@ int main()
     int escolha_idiomas;
     std::string nome_aluno;
     std::string cidade_aluno;
+    int aceita_ligacao;
+    int telefone_aluno;
 
     // -- Mensagem inicial
     std::cout << "-------------- Sistema do SENAC --------------" << std::endl;
@@ -52,9 +54,9 @@ int main()
 
     // -- Registre e receba contato
     std::cout << "\nEntre seu primeiro nome: ";
-    std::getline(std::cin, nome_aluno);
+    std::cin >> nome_aluno;
     std::cout << "\nEntre sua cidade: ";
-    std::getline(std::cin, cidade_aluno);
+    std::cin >> cidade_aluno;
     std::cout << "----------------------------------------------" << std::endl;
 
     // -- Mensagem final
@@ -64,6 +66,22 @@ int main()
     std::cout << "\nTecnico: " << cursos_tecnicos[escolha_tecnicos] << "\nLivres: " << cursos_livres[escolha_livres] << "\nEAD: " << cursos_ead[escolha_ead] << "\nIdiomas: " << cursos_idiomas[escolha_idiomas] << std::endl;
     std::cout << "\n----------------------------------------------" << std::endl;
     std::cout << "\n\n " << std::endl;
+
+    std::cout << "\n"
+              << nome_aluno << " voce aceita receber uma ligacao da nossa unidade mais proxima a " << cidade_aluno << "?" << std::endl;
+    std::cout << "\n [1] - Aceito  || [2] - Nao aceito" << std::endl;
+    std::cin >> aceita_ligacao;
+
+    if (aceita_ligacao == 1)
+    {
+        std::cout << "\nDigite seu numero de contato telefonico sem dd e sem hifen: " << std::endl;
+        std::cin >> telefone_aluno;
+        std::cout << "\nNossa equipa vai entrar em contato com voce " << nome_aluno << ", no telefone " << telefone_aluno << std::endl;
+    }
+    else
+    {
+        std::cout << "\nVenha ate a unidade mais proxima para conversar com um de nossos atendentes!\nAguardamos voce, " << nome_aluno << std::endl;
+    }
 
     return 0;
 }
